@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-main);
     color: var(--color-text);
     background-color: var(--color-light);
+    line-height: 1.6;
 }
 
 a {
