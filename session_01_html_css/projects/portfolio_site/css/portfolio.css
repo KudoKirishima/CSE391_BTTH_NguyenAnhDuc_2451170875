@@ -50,6 +50,11 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
+.lightbox-link {
+    display: block;
+    color: inherit;
+}
+
 .portfolio-item img {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -92,6 +97,48 @@
 .portfolio-overlay p {
     color: rgba(255, 255, 255, 0.85);
     font-size: 1rem;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000;
+}
+
+.lightbox:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    max-width: min(900px, 90vw);
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: white;
+    text-decoration: none;
+}
+
+.lightbox-close:hover {
+    color: var(--color-accent);
 }
 
 @media (min-width: 768px) {
