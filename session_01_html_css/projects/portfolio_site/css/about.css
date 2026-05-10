@@ -49,6 +49,17 @@
 }
 
 @media (min-width: 768px) {
+    .about-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .about-content h2 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
     .about-grid {
         grid-template-columns: 1fr 1.5fr;
         gap: 3rem;
